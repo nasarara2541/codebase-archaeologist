@@ -1,0 +1,28 @@
+{
+  "name": "repo-lens",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:fixture": "vite build fixtures/sample-repo --config fixtures/sample-repo/vite.config.ts",
+    "test": "vitest run",
+    "health": "vitest run tests/health/health-check.test.ts --reporter=verbose"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.11.2",
+    "next": "16.2.10",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^5",
+    "vite": "^8.1.5",
+    "vitest": "^4.1.10"
+  }
+}

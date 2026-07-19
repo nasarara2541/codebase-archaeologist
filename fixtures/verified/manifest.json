@@ -1,0 +1,22 @@
+{
+  "repositories": [
+    {
+      "repositoryUrl": "https://github.com/digitalocean/sample-vite-react",
+      "commitSha": "ce1b05ce493249f241bceee9ea30513b88697cc0",
+      "sourcePath": "fixtures/verified/digitalocean-sample-vite-react",
+      "verifiedFramework": "vite",
+      "declaredScripts": {
+        "build": "rm -r _static 2>/dev/null; node sammy.js; vite build",
+        "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:$PORT -n",
+        "dev": "vite",
+        "preview": "vite preview"
+      },
+      "executionPolicy": {
+        "packageScriptsAllowed": false,
+        "dependencyInstallDuringPreviewAllowed": false,
+        "controlledBuild": "node node_modules/vite/bin/vite.js build <verified-source> --outDir <temporary-dist> --emptyOutDir",
+        "controlledStart": "node scripts/serve-preview.mjs <temporary-dist> <loopback-port>"
+      }
+    }
+  ]
+}
